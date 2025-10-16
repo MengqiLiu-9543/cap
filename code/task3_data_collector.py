@@ -189,7 +189,7 @@ def main():
     df = df.dropna(subset=['adverse_event'])  # 必须有不良事件
     
     # 保存结果
-    output_file = 'task3_oncology_drug_event_pairs.csv'
+    output_file = '../data/task3_oncology_drug_event_pairs.csv'
     df.to_csv(output_file, index=False)
     
     print("\n" + "=" * 80)
