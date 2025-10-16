@@ -30,7 +30,7 @@ def load_data(filename):
             records.append(row)
     return records
 
-data = load_data('task3_oncology_drug_event_pairs.csv')
+data = load_data('../data/task3_oncology_drug_event_pairs.csv')
 print(f"✓ 加载了 {len(data)} 条记录\n")
 
 # ============================================================================
@@ -217,7 +217,7 @@ print("=" * 80)
 print()
 
 # 保存完整结果到CSV
-with open('task3_anomalies_detected.csv', 'w', newline='', encoding='utf-8') as f:
+with open('../data/task3_anomalies_detected.csv', 'w', newline='', encoding='utf-8') as f:
     writer = csv.DictWriter(f, fieldnames=[
         'drug', 'event', 'count', 'anomaly_score', 'prr', 'ror', 'chi2',
         'serious_rate', 'death_rate', 'hosp_rate', 'rarity_score', 'reasons'
@@ -240,7 +240,7 @@ with open('task3_anomalies_detected.csv', 'w', newline='', encoding='utf-8') as 
             'reasons': '; '.join(anom['reasons'])
         })
 
-print("💾 完整结果已保存到: task3_anomalies_detected.csv\n")
+print("💾 完整结果已保存到: ../data/task3_anomalies_detected.csv\n")
 
 # 展示Top 50
 for i, anom in enumerate(anomalies[:50], 1):

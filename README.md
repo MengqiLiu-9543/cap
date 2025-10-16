@@ -9,30 +9,39 @@
 
 ---
 
-## 📁 文件清单
+## 📁 文件结构
 
-### 代码文件
+```
+task3_deliverables/
+├── README.md                    # 项目说明文档
+├── code/                        # 代码文件
+│   ├── task3_data_collector.py           # 数据收集脚本 (7.6 KB)
+│   └── task3_anomaly_detection.py        # 异常检测算法 (11 KB)
+├── data/                        # 数据文件
+│   ├── task3_oncology_drug_event_pairs.csv      # 原始数据集 (16 MB, 55,604条)
+│   └── task3_anomalies_detected.csv             # 检测结果 (889 KB, 6,826个异常)
+└── docs/                        # 文档报告
+    ├── task3_completion_summary.md       # 项目完成总结 (8.5 KB)
+    ├── task3_executive_summary.md        # 执行摘要 (6.8 KB)
+    ├── task3_final_report.md             # 完整技术报告 (14 KB)
+    └── task3_visualization_summary.md    # 可视化总结 (15 KB)
+```
 
-| 文件 | 大小 | 描述 |
-|------|------|------|
-| `task3_data_collector.py` | 7.6 KB | 数据收集脚本，从OpenFDA API获取35种肿瘤药物的不良事件数据 |
-| `task3_anomaly_detection.py` | 11 KB | 异常检测算法，实现基于Isolation Forest原理的药物安全信号检测 |
+### 文件说明
 
-### 数据文件
+#### 📂 `code/` - 代码文件
+- **task3_data_collector.py**: 从OpenFDA API获取35种肿瘤药物的不良事件数据
+- **task3_anomaly_detection.py**: 实现基于Isolation Forest原理的药物安全信号检测
 
-| 文件 | 大小 | 描述 |
-|------|------|------|
-| `task3_oncology_drug_event_pairs.csv` | 16 MB | 原始数据集，包含55,604条药物-事件对 |
-| `task3_anomalies_detected.csv` | 889 KB | 检测结果，包含6,826个异常信号 |
+#### 📂 `data/` - 数据文件
+- **task3_oncology_drug_event_pairs.csv**: 原始数据集，包含55,604条药物-事件对
+- **task3_anomalies_detected.csv**: 检测结果，包含6,826个异常信号
 
-### 文档文件
-
-| 文件 | 大小 | 描述 |
-|------|------|------|
-| `task3_completion_summary.md` | 8.5 KB | 项目完成通知，快速了解项目状态和成果 |
-| `task3_executive_summary.md` | 6.8 KB | 执行摘要，适合项目经理和非技术人员阅读 |
-| `task3_final_report.md` | 14 KB | 完整技术报告，包含详细方法论和发现 |
-| `task3_visualization_summary.md` | 15 KB | 可视化总结，包含图表和数据排行榜 |
+#### 📂 `docs/` - 文档报告
+- **task3_completion_summary.md**: 项目完成通知，快速了解项目状态和成果
+- **task3_executive_summary.md**: 执行摘要，适合项目经理和非技术人员阅读
+- **task3_final_report.md**: 完整技术报告，包含详细方法论和发现
+- **task3_visualization_summary.md**: 可视化总结，包含图表和数据排行榜
 
 ---
 
@@ -82,18 +91,20 @@ pip install requests
 ### 2. 运行数据收集
 
 ```bash
+cd code
 python task3_data_collector.py
 ```
 
-这将从OpenFDA API收集35种肿瘤药物的不良事件数据，生成 `task3_oncology_drug_event_pairs.csv`。
+这将从OpenFDA API收集35种肿瘤药物的不良事件数据，生成 `data/task3_oncology_drug_event_pairs.csv`。
 
 ### 3. 运行异常检测
 
 ```bash
+cd code
 python task3_anomaly_detection.py
 ```
 
-这将对收集的数据进行异常检测，生成 `task3_anomalies_detected.csv`。
+这将对收集的数据进行异常检测，生成 `data/task3_anomalies_detected.csv`。
 
 ### 4. 查看结果
 
@@ -101,7 +112,7 @@ python task3_anomaly_detection.py
 import pandas as pd
 
 # 加载异常检测结果
-df = pd.read_csv('task3_anomalies_detected.csv')
+df = pd.read_csv('data/task3_anomalies_detected.csv')
 
 # 查看高风险信号
 high_risk = df[df['anomaly_score'].astype(float) >= 70]
@@ -153,20 +164,20 @@ print(f"\nEpcoritamab异常信号:\n{epc[['event', 'anomaly_score', 'prr', 'deat
 ### 对于不同角色的推荐阅读顺序
 
 #### 项目经理 / 非技术人员
-1. 📄 `task3_completion_summary.md` - 快速了解项目完成情况
-2. 📄 `task3_executive_summary.md` - 执行摘要和关键发现
-3. 📄 `task3_visualization_summary.md` - 可视化图表和排行榜
+1. 📄 `docs/task3_completion_summary.md` - 快速了解项目完成情况
+2. 📄 `docs/task3_executive_summary.md` - 执行摘要和关键发现
+3. 📄 `docs/task3_visualization_summary.md` - 可视化图表和排行榜
 
 #### 数据科学家 / 技术人员
-1. 📄 `task3_final_report.md` - 完整技术报告
-2. 📄 `task3_anomaly_detection.py` - 算法实现代码
-3. 📄 `task3_data_collector.py` - 数据收集代码
-4. 📊 `task3_anomalies_detected.csv` - 分析检测结果
+1. 📄 `docs/task3_final_report.md` - 完整技术报告
+2. 📄 `code/task3_anomaly_detection.py` - 算法实现代码
+3. 📄 `code/task3_data_collector.py` - 数据收集代码
+4. 📊 `data/task3_anomalies_detected.csv` - 分析检测结果
 
 #### 临床医生 / 药物安全专家
-1. 📄 `task3_executive_summary.md` - 关键临床发现
-2. 📄 `task3_visualization_summary.md` - Epcoritamab风险图谱
-3. 📊 `task3_anomalies_detected.csv` - 具体药物-事件对数据
+1. 📄 `docs/task3_executive_summary.md` - 关键临床发现
+2. 📄 `docs/task3_visualization_summary.md` - Epcoritamab风险图谱
+3. 📊 `data/task3_anomalies_detected.csv` - 具体药物-事件对数据
 
 ---
 
