@@ -1,0 +1,14 @@
+feature,importance
+total_events,0.179039541081342
+patient_age,0.16926916434332107
+time_to_event_days,0.14689220977788695
+total_drugs,0.11287515244545133
+concomitant_drugs,0.09066135464473009
+administration_route_encoded,0.08098555799905763
+patient_weight,0.07873282054369342
+drug_characterization,0.04561871385297137
+weight_group_encoded,0.03473697290599571
+polypharmacy,0.029141439448833236
+drug_interaction_risk_encoded,0.021863075134236985
+multiple_events,0.010183997822480277
+age_group_encoded,0.0
