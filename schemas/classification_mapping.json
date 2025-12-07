@@ -1,0 +1,96 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "properties": {
+      "@checksum": {
+        "type": "keyword"
+      },
+      "definition": {
+        "type": "text"
+      },
+      "device_class": {
+        "type": "text"
+      },
+      "device_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "gmp_exempt_flag": {
+        "type": "text"
+      },
+      "implant_flag": {
+        "type": "text"
+      },
+      "life_sustain_support_flag": {
+        "type": "text"
+      },
+      "medical_specialty": {
+        "type": "text"
+      },
+      "medical_specialty_description": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "openfda": {
+        "properties": {
+          "device_class": {
+            "type": "keyword"
+          },
+          "fei_number": {
+            "type": "keyword"
+          },
+          "k_number": {
+            "type": "keyword"
+          },
+          "pma_number": {
+            "type": "keyword"
+          },
+          "registration_number": {
+            "type": "keyword"
+          }
+        }
+      },
+      "product_code": {
+        "type": "text"
+      },
+      "regulation_number": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "review_code": {
+        "type": "text"
+      },
+      "review_panel": {
+        "type": "text"
+      },
+      "submission_type_id": {
+        "type": "text"
+      },
+      "summary_malfunction_reporting": {
+        "type": "keyword"
+      },
+      "third_party_flag": {
+        "type": "text"
+      },
+      "unclassified_reason": {
+        "type": "text"
+      }
+    }
+  }
+}

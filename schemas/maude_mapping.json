@@ -1,0 +1,1046 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "properties": {
+      "@checksum": {
+        "type": "keyword"
+      },
+      "adverse_event_flag": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "date_facility_aware": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "date_manufacturer_received": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "date_of_event": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "date_received": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "date_report": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "date_report_to_fda": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "date_report_to_manufacturer": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "date_added": {
+        "type": "text"
+      },
+      "date_changed": {
+        "type": "text"
+      },
+      "device": {
+        "properties": {
+          "openfda": {
+            "properties": {
+              "device_class": {
+                "type": "keyword"
+              },
+              "device_name": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "fei_number": {
+                "type": "keyword"
+              },
+              "medical_specialty_description": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "registration_number": {
+                "type": "keyword"
+              },
+              "regulation_number": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              }
+            }
+          },
+          "baseline_510_k_exempt_flag": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_510_k_flag": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_510_k_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_brand_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_catalog_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_date_ceased_marketing": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "baseline_date_first_marketed": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "baseline_device_family": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_generic_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_model_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_other_id_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_pma_flag": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_pma_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_preamendment_flag": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_shelf_life_contained": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_shelf_life_in_months": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "baseline_transitional_flag": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "brand_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "catalog_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "date_received": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "date_removed_flag": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "date_returned_to_manufacturer": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "device_age_text": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "device_availability": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "device_evaluated_by_manufacturer": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "device_event_key": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "device_operator": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "device_report_product_code": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "device_sequence_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "expiration_date_of_device": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "generic_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "implant_flag": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "lot_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "manufacturer_d_address_1": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "manufacturer_d_address_2": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "manufacturer_d_city": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "manufacturer_d_country": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "manufacturer_d_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "manufacturer_d_postal_code": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "manufacturer_d_state": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "manufacturer_d_zip_code": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "manufacturer_d_zip_code_ext": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "model_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "other_id_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "device_date_of_manufacturere": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "distributor_address_1": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "distributor_address_2": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "distributor_city": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "distributor_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "distributor_state": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "distributor_zip_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "distributor_zip_code_ext": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "event_key": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "event_location": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "event_type": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "health_professional": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "initial_report_to_fda": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_address_1": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_address_2": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_city": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_address_1": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_address_2": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_area_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_city": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_country": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_exchange": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_extension": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_f_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_l_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_pcity": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_pcountry": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_phone_number": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_plocal": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_postal_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_state": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_t_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_zip_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_contact_zip_ext": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_country": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_g1_city": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_g1_country": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_g1_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_g1_postal_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_g1_state": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_g1_street_1": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_g1_street_2": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_g1_zip_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_g1_zip_code_ext": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_link_flag": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_postal_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_state": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_zip_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "manufacturer_zip_code_ext": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "mdr_report_key": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "mdr_text": {
+        "properties": {
+          "date_report": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "mdr_text_key": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "patient_sequence_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "text": {
+            "fields": {
+              "exact": {
+                "type": "keyword",
+                "ignore_above": 8191
+              }
+            },
+            "type": "text"
+          },
+          "text_type_code": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "number_devices_in_event": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "number_patients_in_event": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "patient": {
+        "properties": {
+          "date_received": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "patient_sequence_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "sequence_number_outcome": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "keyword"
+          },
+          "sequence_number_treatment": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "keyword"
+          },
+          "patient_problems": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "previous_use_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "product_problem_flag": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "product_problems": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "remedial_action": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "removal_correction_number": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "report_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "report_number": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "report_source_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "report_to_fda": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "report_to_manufacturer": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "reporter_occupation_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "reprocessed_and_reused_flag": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "single_use_flag": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "source_type": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "type_of_report": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      }
+    }
+  }
+}

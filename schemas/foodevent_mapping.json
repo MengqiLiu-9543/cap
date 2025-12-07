@@ -1,0 +1,72 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "properties": {
+      "consumer": {
+        "properties": {
+          "age": {"type": "keyword"},
+          "age_unit": {"type": "keyword"},
+          "gender": {"type": "keyword"}
+        }
+      },
+      "date_created": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "date_started": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "outcomes": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "products": {
+        "properties": {
+          "industry_code": {"type": "text"},
+          "industry_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "name_brand": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "role": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "reactions": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "report_number": {"type": "text"}
+    }
+  }
+}

@@ -1,0 +1,583 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "dynamic": "strict",
+    "properties": {
+      "@version": {
+        "type": "keyword"
+      },
+      "@case_number": {
+        "type": "keyword"
+      },
+      "@checksum": {
+        "type": "keyword"
+      },
+      "@epoch": {
+        "null_value": 0,
+        "type": "double"
+      },
+      "@timestamp": {
+        "format": "dateOptionalTime||epoch_millis",
+        "type": "date"
+      },
+      "authoritynumb": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "companynumb": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "duplicate": {
+        "type": "short"
+      },
+      "fulfillexpeditecriteria": {
+        "type": "byte"
+      },
+      "occurcountry": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "patient": {
+        "properties": {
+          "drug": {
+            "properties": {
+              "actiondrug": {
+                "type": "long"
+              },
+              "activesubstance": {
+                "properties": {
+                  "activesubstancename": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  }
+                }
+              },
+              "drugadditional": {
+                "type": "long"
+              },
+              "drugadministrationroute": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "drugauthorizationnumb": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "drugbatchnumb": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "drugcharacterization": {
+                "type": "byte"
+              },
+              "drugcumulativedosagenumb": {
+                "type": "float"
+              },
+              "drugcumulativedosageunit": {
+                "type": "text"
+              },
+              "drugdosageform": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "drugdosagetext": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "drugenddate": {
+                "format": "basic_date||date||epoch_millis",
+                "type": "date"
+              },
+              "drugenddateformat": {
+                "type": "text"
+              },
+              "drugindication": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "drugintervaldosagedefinition": {
+                "type": "short"
+              },
+              "drugintervaldosageunitnumb": {
+                "type": "short"
+              },
+              "drugrecurreadministration": {
+                "type": "byte"
+              },
+              "drugrecurrence": {
+                "properties": {
+                  "drugrecuraction": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  }
+                }
+              },
+              "drugseparatedosagenumb": {
+                "type": "byte"
+              },
+              "drugstartdate": {
+                "format": "basic_date||date||epoch_millis",
+                "type": "date"
+              },
+              "drugstartdateformat": {
+                "type": "text"
+              },
+              "drugstructuredosagenumb": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "drugstructuredosageunit": {
+                "type": "text"
+              },
+              "drugtreatmentduration": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "drugtreatmentdurationunit": {
+                "type": "text"
+              },
+              "medicinalproduct": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "openfda": {
+                "properties": {
+                  "application_number": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "brand_name": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "dosage_form": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "generic_name": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "is_original_packager": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "boolean"
+                  },
+                  "manufacturer_name": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "nui": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "package_ndc": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "pharm_class_cs": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "pharm_class_epc": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "pharm_class_moa": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "pharm_class_pe": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "product_ndc": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "product_type": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "route": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "rxcui": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "rxstring": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "rxtty": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "spl_id": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "spl_set_id": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "substance_name": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "unii": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  },
+                  "upc": {
+                    "fields": {
+                      "exact": {
+                        "type": "keyword"
+                      }
+                    },
+                    "type": "text"
+                  }
+                }
+              }
+            }
+          },
+          "patientagegroup": {
+            "type": "byte"
+          },
+          "patientdeath": {
+            "properties": {
+              "patientdeathdate": {
+                "format": "basic_date||date||epoch_millis",
+                "type": "date"
+              },
+              "patientdeathdateformat": {
+                "type": "text"
+              }
+            }
+          },
+          "patientonsetage": {
+            "type": "float"
+          },
+          "patientonsetageunit": {
+            "type": "text"
+          },
+          "patientsex": {
+            "type": "byte"
+          },
+          "patientweight": {
+            "type": "float"
+          },
+          "reaction": {
+            "properties": {
+              "reactionmeddrapt": {
+                "fields": {
+                  "exact": {
+                    "type": "text",
+                    "analyzer": "uppercase_not_tokenized",
+                    "fielddata": true
+                  }
+                },
+                "type": "text"
+              },
+              "reactionmeddraversionpt": {
+                "type": "text"
+              },
+              "reactionoutcome": {
+                "type": "byte"
+              }
+            }
+          },
+          "summary": {
+            "properties": {
+              "narrativeincludeclinical": {
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "primarysource": {
+        "properties": {
+          "literaturereference": {
+            "type": "text"
+          },
+          "qualification": {
+            "type": "byte"
+          },
+          "reportercountry": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "primarysourcecountry": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "receiptdate": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "receiptdateformat": {
+        "type": "text"
+      },
+      "receivedate": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "receivedateformat": {
+        "type": "text"
+      },
+      "receiver": {
+        "properties": {
+          "receiverorganization": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "receivertype": {
+            "type": "short"
+          }
+        }
+      },
+      "reportduplicate": {
+        "properties": {
+          "duplicatenumb": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "duplicatesource": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "reporttype": {
+        "type": "byte"
+      },
+      "safetyreportid": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "safetyreportversion": {
+        "type": "integer"
+      },
+      "sender": {
+        "properties": {
+          "senderorganization": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "sendertype": {
+            "type": "byte"
+          }
+        }
+      },
+      "serious": {
+        "type": "byte"
+      },
+      "seriousnesscongenitalanomali": {
+        "type": "byte"
+      },
+      "seriousnessdeath": {
+        "type": "byte"
+      },
+      "seriousnessdisabling": {
+        "type": "byte"
+      },
+      "seriousnesshospitalization": {
+        "type": "byte"
+      },
+      "seriousnesslifethreatening": {
+        "type": "byte"
+      },
+      "seriousnessother": {
+        "type": "byte"
+      },
+      "transmissiondate": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "transmissiondateformat": {
+        "type": "text"
+      }
+    }
+  }
+}

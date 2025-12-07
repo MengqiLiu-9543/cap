@@ -1,0 +1,21 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "uppercase_not_tokenized": {
+          "filter": [
+            "uppercase"
+          ],
+          "tokenizer": "keyword",
+          "type": "custom"
+        }
+      }
+    },
+    "index": {
+      "refresh_interval": "30s",
+      "max_result_window" : "26000",
+      "number_of_shards" : "10",
+      "number_of_replicas" : "2"
+    }
+  }
+}

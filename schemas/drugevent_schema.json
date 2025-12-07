@@ -1,0 +1,419 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema",
+  "properties": {
+    "authoritynumb": {
+      "type": "string"
+    },
+    "companynumb": {
+      "type": "string"
+    },
+    "duplicate": {
+      "type": "string",
+      "format": "int32"
+    },
+    "fulfillexpeditecriteria": {
+      "type": "string",
+      "format": "int32"
+    },
+    "occurcountry": {
+      "type": "string"
+    },
+    "patient": {
+      "properties": {
+        "drug": {
+          "items": {
+            "properties": {
+              "actiondrug": {
+                "type": "string",
+                "format": "int64"
+              },
+              "activesubstance": {
+                "properties": {
+                  "activesubstancename": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "drugadditional": {
+                "type": "string",
+                "format": "int64"
+              },
+              "drugadministrationroute": {
+                "type": "string"
+              },
+              "drugauthorizationnumb": {
+                "type": "string"
+              },
+              "drugbatchnumb": {
+                "type": "string"
+              },
+              "drugcharacterization": {
+                "type": "string",
+                "format": "int32"
+              },
+              "drugcumulativedosagenumb": {
+                "type": "string",
+                "format": "float"
+              },
+              "drugcumulativedosageunit": {
+                "type": "string"
+              },
+              "drugdosageform": {
+                "type": "string"
+              },
+              "drugdosagetext": {
+                "type": "string"
+              },
+              "drugenddate": {
+                "type": "string",
+                "format": "date"
+              },
+              "drugenddateformat": {
+                "type": "string"
+              },
+              "drugindication": {
+                "type": "string"
+              },
+              "drugintervaldosagedefinition": {
+                "type": "string",
+                "format": "int32"
+              },
+              "drugintervaldosageunitnumb": {
+                "type": "string",
+                "format": "int32"
+              },
+              "drugrecurreadministration": {
+                "type": "string",
+                "format": "int32"
+              },
+              "drugrecurrence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "drugrecuraction": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "drugseparatedosagenumb": {
+                "type": "string",
+                "format": "int32"
+              },
+              "drugstartdate": {
+                "type": "string",
+                "format": "date"
+              },
+              "drugstartdateformat": {
+                "type": "string"
+              },
+              "drugstructuredosagenumb": {
+                "type": "string"
+              },
+              "drugstructuredosageunit": {
+                "type": "string"
+              },
+              "drugtreatmentduration": {
+                "type": "string"
+              },
+              "drugtreatmentdurationunit": {
+                "type": "string"
+              },
+              "medicinalproduct": {
+                "type": "string"
+              },
+              "openfda": {
+                "properties": {
+                  "application_number": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "brand_name": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "generic_name": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "manufacturer_name": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "nui": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "package_ndc": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "pharm_class_cs": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "pharm_class_epc": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "pharm_class_moa": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "pharm_class_pe": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "product_ndc": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "product_type": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "route": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "rxcui": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "spl_id": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "spl_set_id": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "substance_name": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "unii": {
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "patientagegroup": {
+          "type": "string",
+          "format": "int32"
+        },
+        "patientdeath": {
+          "type": "object",
+          "properties": {
+            "patientdeathdate": {
+              "type": "string",
+              "format": "date"
+            },
+            "patientdeathdateformat": {
+              "type": "string"
+            }
+          }
+        },
+        "patientonsetage": {
+          "type": "string",
+          "format": "float"
+        },
+        "patientonsetageunit": {
+          "type": "string"
+        },
+        "patientsex": {
+          "type": "string",
+          "format": "int32"
+        },
+        "patientweight": {
+          "type": "string",
+          "format": "float"
+        },
+        "reaction": {
+          "items": {
+            "properties": {
+              "reactionmeddrapt": {
+                "type": "string"
+              },
+              "reactionmeddraversionpt": {
+                "type": "string"
+              },
+              "reactionoutcome": {
+                "type": "string",
+                "format": "int32"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "summary": {
+          "type": "object",
+          "properties": {
+            "narrativeincludeclinical": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "type": "object"
+    },
+    "primarysource": {
+      "properties": {
+        "literaturereference": {
+          "type": "string"
+        },
+        "qualification": {
+          "type": "string"
+        },
+        "reportercountry": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "primarysourcecountry": {
+      "type": "string"
+    },
+    "receiptdate": {
+      "type": "string",
+      "format": "date"
+    },
+    "receiptdateformat": {
+      "type": "string"
+    },
+    "receivedate": {
+      "type": "string",
+      "format": "date"
+    },
+    "receivedateformat": {
+      "type": "string"
+    },
+    "receiver": {
+      "type": "object",
+      "properties": {
+        "receiverorganization": {
+          "type": "string"
+        },
+        "receivertype": {
+          "type": "string",
+          "format": "int32"
+        }
+      }
+    },
+    "reportduplicate": {
+        "type": "object",
+        "properties": {
+          "duplicatenumb": {
+            "type": "string"
+          },
+          "duplicatesource": {
+            "type": "string"
+          }
+        }
+      },
+      "reporttype": {
+        "type": "string",
+        "format": "int32"
+      },
+    "safetyreportid": {
+      "type": "string"
+    },
+    "safetyreportversion": {
+      "type": "string",
+      "format": "int32"
+    },
+    "sender": {
+      "properties": {
+        "senderorganization": {
+          "type": "string"
+        },
+        "sendertype": {
+          "type": "string",
+          "format": "int32"
+        }
+      },
+      "type": "object"
+    },
+    "serious": {
+      "type": "string",
+      "format": "int32"
+    },
+    "seriousnesscongenitalanomali": {
+      "type": "string",
+      "format": "int32"
+    },
+    "seriousnessdeath": {
+      "type": "string",
+      "format": "int32"
+    },
+    "seriousnessdisabling": {
+      "type": "string",
+      "format": "int32"
+    },
+    "seriousnesshospitalization": {
+      "type": "string",
+      "format": "int32"
+    },
+    "seriousnesslifethreatening": {
+      "type": "string",
+      "format": "int32"
+    },
+    "seriousnessother": {
+      "type": "string",
+      "format": "int32"
+    },
+    "transmissiondate": {
+      "type": "string",
+      "format": "date"
+    },
+    "transmissiondateformat": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

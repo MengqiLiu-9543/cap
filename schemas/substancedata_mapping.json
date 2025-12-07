@@ -1,0 +1,1430 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "properties": {
+      "definition_level": {
+        "type":  "keyword"
+      },
+      "definition_type": {
+        "type":  "keyword"
+      },
+      "substance_class": {
+        "type":  "keyword"
+      },
+      "tags": {
+        "type":  "keyword"
+      },
+      "unii": {
+        "type":  "keyword"
+      },
+      "uuid": {
+        "type":  "keyword"
+      },
+      "version": {
+       "type":  "keyword"
+      },
+      "codes":{
+        "properties": {
+          "code": {
+            "type":  "keyword"
+          },
+          "code_system": {
+            "type":  "keyword"
+          },
+          "comments": {
+            "type":  "keyword"
+          },
+          "references": {
+           "type":  "keyword"
+          },
+          "type": {
+           "type":  "keyword"
+          },
+          "url": {
+            "type":  "keyword"
+          },
+          "uuid": {
+           "type":  "keyword"
+          }
+        }
+      },
+      "mixture":{
+        "properties": {
+          "components": {
+            "properties": {
+              "references": {
+               "type":  "keyword"
+              },
+              "substance": {
+                "properties": {
+                  "linking_id": {
+                    "type":  "keyword"
+                  },
+                  "name": {
+                   "type":  "keyword"
+                  },
+                  "ref_pname": {
+                   "type":  "keyword"
+                  },
+                  "references": {
+                   "type":  "keyword"
+                  },
+                  "refuuid": {
+                  "type":  "keyword"
+                  },
+                  "substance_class": {
+                   "type":  "keyword"
+                  },
+                  "unii": {
+                   "type":  "keyword"
+                  },
+                  "uuid": {
+                   "type":  "keyword"
+                  }
+                }
+              },
+              "type": {
+               "type":  "keyword"
+              },
+              "uuid": {
+               "type":  "keyword"
+              }
+            }
+          },
+          "parent_substance": {
+            "properties": {
+              "linking_id": {
+               "type":  "keyword"
+              },
+              "name": {
+               "type":  "keyword"
+              },
+              "ref_pname": {
+               "type":  "keyword"
+              },
+              "references": {
+              "type":  "keyword"
+              },
+              "refuuid": {
+              "type":  "keyword"
+              },
+              "substance_class": {
+               "type":  "keyword"
+              },
+              "unii": {
+               "type":  "keyword"
+              },
+              "uuid": {
+               "type":  "keyword"
+              }
+            }
+          },
+          "references": {
+           "type":  "keyword"
+          },
+          "uuid": {
+          "type":  "keyword"
+          }
+        }
+      },
+      "modifications":{
+        "properties": {
+          "agent_modifications": {
+            "properties": {
+              "agent_modification_process": {
+                "type": "keyword"
+              },
+              "agent_modification_role": {
+                "type": "keyword"
+              },
+              "agent_modification_type": {
+                "type": "keyword"
+              },
+              "agent_substance": {
+                "properties": {
+                  "linking_id": {
+                    "type": "keyword"
+                  },
+                  "name": {
+                    "type": "keyword"
+                  },
+                  "ref_pname": {
+                    "type": "keyword"
+                  },
+                  "references": {
+                    "type": "keyword"
+                  },
+                  "refuuid": {
+                    "type": "keyword"
+                  },
+                  "substance_class": {
+                    "type": "keyword"
+                  },
+                  "unii": {
+                    "type": "keyword"
+                  },
+                  "uuid": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "amount": {
+                "properties": {
+                  "average": {
+                    "type": "keyword"
+                  },
+                  "high": {
+                    "type": "keyword"
+                  },
+                  "high_limit": {
+                    "type": "keyword"
+                  },
+                  "low": {
+                    "type": "keyword"
+                  },
+                  "low_limit": {
+                    "type": "keyword"
+                  },
+                  "non_numeric_value": {
+                    "type": "keyword"
+                  },
+                  "references": {
+                    "type": "keyword"
+                  },
+                  "type": {
+                    "type": "keyword"
+                  },
+                  "units": {
+                    "type": "keyword"
+                  },
+                  "uuid": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "modification_group": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "physical_modifications": {
+            "properties": {
+              "modification_group": {
+                "type": "keyword"
+              },
+              "parameters": {
+                "properties": {
+                  "amount": {
+                    "properties": {
+                      "average": {
+                        "type": "keyword"
+                      },
+                      "high_limit": {
+                        "type": "keyword"
+                      },
+                      "low_limit": {
+                        "type": "keyword"
+                      },
+                      "non_numeric_value": {
+                        "type": "keyword"
+                      },
+                      "references": {
+                        "type": "keyword"
+                      },
+                      "type": {
+                        "type": "keyword"
+                      },
+                      "units": {
+                        "type": "keyword"
+                      },
+                      "uuid": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "parameter_name": {
+                    "type": "keyword"
+                  },
+                  "references": {
+                    "type": "keyword"
+                  },
+                  "uuid": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "physical_modification_role": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "references": {
+            "type": "keyword"
+          },
+          "structural_modifications": {
+            "properties": {
+              "extent": {
+                "type": "keyword"
+              },
+              "extent_amount": {
+                "properties": {
+                  "average": {
+                    "type": "keyword"
+                  },
+                  "high": {
+                    "type": "keyword"
+                  },
+                  "high_limit": {
+                    "type": "keyword"
+                  },
+                  "low": {
+                    "type": "keyword"
+                  },
+                  "low_limit": {
+                    "type": "keyword"
+                  },
+                  "non_numeric_value": {
+                    "type": "keyword"
+                  },
+                  "references": {
+                    "type": "keyword"
+                  },
+                  "type": {
+                    "type": "keyword"
+                  },
+                  "units": {
+                    "type": "keyword"
+                  },
+                  "uuid": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "location_type": {
+                "type": "keyword"
+              },
+              "modification_group": {
+                "type": "keyword"
+              },
+              "molecular_fragment": {
+                "properties": {
+                  "linking_id": {
+                    "type": "keyword"
+                  },
+                  "name": {
+                    "type": "keyword"
+                  },
+                  "ref_pname": {
+                    "type": "keyword"
+                  },
+                  "references": {
+                    "type": "keyword"
+                  },
+                  "refuuid": {
+                    "type": "keyword"
+                  },
+                  "substance_class": {
+                    "type": "keyword"
+                  },
+                  "unii": {
+                    "type": "keyword"
+                  },
+                  "uuid": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "residue_modified": {
+                "type": "keyword"
+              },
+              "sites": {
+                "properties": {
+                  "residue_index": {
+                    "type": "keyword"
+                  },
+                  "subunit_index": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "structural_modification_type": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "uuid": {
+            "type": "keyword"
+          }
+        }
+      },
+      "moieties":{
+        "properties": {
+          "atropisomerism": {
+            "type": "keyword"
+          },
+          "charge": {
+            "type": "keyword"
+          },
+          "count": {
+            "type": "integer"
+          },
+          "count_amount": {
+            "properties": {
+              "average": {
+                "type": "keyword"
+              },
+              "high": {
+                "type": "keyword"
+              },
+              "high_limit": {
+                "type": "keyword"
+              },
+              "low": {
+                "type": "keyword"
+              },
+              "low_limit": {
+                "type": "keyword"
+              },
+              "non_numeric_value": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "type": {
+                "type": "keyword"
+              },
+              "units": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "defined_stereo": {
+            "type": "keyword"
+          },
+          "digest": {
+            "type": "keyword"
+          },
+          "ez_centers": {
+            "type": "keyword"
+          },
+          "formula": {
+            "type": "keyword"
+          },
+          "id": {
+            "type": "keyword"
+          },
+          "molecular_weight": {
+            "type": "float"
+          },
+          "molfile": {
+            "index": false,
+            "type": "text"
+          },
+          "optical_activity": {
+            "type": "keyword"
+          },
+          "references": {
+            "type": "keyword"
+          },
+          "smiles": {
+            "type": "keyword"
+          },
+          "stereochemistry": {
+            "type": "keyword"
+          },
+          "stereo_centers": {
+            "type": "keyword"
+          },
+          "stereo_comments": {
+            "type": "keyword"
+          },
+          "uuid": {
+            "type": "keyword"
+          }
+        }
+      },
+      "names":{
+        "properties": {
+          "display_name": {
+            "type": "keyword"
+          },
+          "domains": {
+            "type": "keyword"
+          },
+          "languages": {
+            "type": "keyword"
+          },
+          "name": {
+            "type": "keyword"
+          },
+          "name_jurisdiction": {
+            "type": "keyword"
+          },
+          "preferred": {
+            "type": "keyword"
+          },
+          "references": {
+            "type": "keyword"
+          },
+          "type": {
+            "type": "keyword"
+          },
+          "uuid": {
+            "type": "keyword"
+          },
+          "name_orgs": {
+            "properties": {
+              "deprecated_date": {
+                "type": "keyword"
+              },
+              "name_org": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "notes": {
+        "properties": {
+          "note": {
+            "type": "keyword"
+          },
+          "references": {
+            "type": "keyword"
+          },
+          "uuid": {
+            "type": "keyword"
+          }
+        }
+      },
+      "nucleic_acid":{
+        "properties": {
+          "linkages": {
+            "properties": {
+              "linkage": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "sites": {
+                "properties": {
+                  "residue_index": {
+                    "type": "keyword"
+                  },
+                  "subunit_index": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "nucleic_acid_sub_type": {
+            "type": "keyword"
+          },
+          "nucleic_acid_type": {
+            "type": "keyword"
+          },
+          "references": {
+            "type": "keyword"
+          },
+          "sequence_origin": {
+            "type": "keyword"
+          },
+          "sequence_type": {
+            "type": "keyword"
+          },
+          "subunits": {
+            "properties": {
+              "references": {
+                "type": "keyword"
+              },
+              "sequence": {
+                "type": "text"
+              },
+              "subunit_index": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "sugars": {
+            "properties": {
+              "references": {
+                "type": "keyword"
+              },
+              "sites": {
+                "properties": {
+                  "residue_index": {
+                    "type": "keyword"
+                  },
+                  "subunit_index": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "sugar": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "uuid": {
+            "type": "keyword"
+          }
+        }
+      },
+      "polymer":{
+        "properties": {
+          "classification": {
+            "properties": {
+              "parent_substance": {
+                "properties": {
+                  "linking_id": {
+                    "type": "keyword"
+                  },
+                  "name": {
+                    "type": "keyword"
+                  },
+                  "ref_pname": {
+                    "type": "keyword"
+                  },
+                  "references": {
+                    "type": "keyword"
+                  },
+                  "refuuid": {
+                    "type": "keyword"
+                  },
+                  "substance_class": {
+                    "type": "keyword"
+                  },
+                  "unii": {
+                    "type": "keyword"
+                  },
+                  "uuid": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "polymer_class": {
+                "type": "keyword"
+              },
+              "polymer_geometry": {
+                "type": "keyword"
+              },
+              "polymer_subclass": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "source_type": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "display_structure": {
+            "properties": {
+              "charge": {
+                "type": "keyword"
+              },
+              "count": {
+                "type": "keyword"
+              },
+              "defined_stereo": {
+                "type": "keyword"
+              },
+              "ez_centers": {
+                "type": "keyword"
+              },
+              "id": {
+                "type": "keyword"
+              },
+              "molecular_weight": {
+                "type": "keyword"
+              },
+              "molfile": {
+                "type": "text"
+              },
+              "optical_activity": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "stereochemistry": {
+                "type": "keyword"
+              },
+              "stereo_centers": {
+                "type": "keyword"
+              }
+            }
+          },
+          "idealized_structure": {
+            "properties": {
+              "charge": {
+                "type": "keyword"
+              },
+              "count": {
+                "type": "keyword"
+              },
+              "defined_stereo": {
+                "type": "keyword"
+              },
+              "ez_centers": {
+                "type": "keyword"
+              },
+              "id": {
+                "type": "keyword"
+              },
+              "molecular_weight": {
+                "type": "keyword"
+              },
+              "molfile": {
+                "type": "text"
+              },
+              "optical_activity": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "stereochemistry": {
+                "type": "keyword"
+              },
+              "stereo_centers": {
+                "type": "keyword"
+              }
+            }
+          },
+          "monomers": {
+            "properties": {
+              "amount": {
+                "properties": {
+                  "average": {
+                    "type": "keyword"
+                  },
+                  "high": {
+                    "type": "keyword"
+                  },
+                  "high_limit": {
+                    "type": "keyword"
+                  },
+                  "low": {
+                    "type": "keyword"
+                  },
+                  "low_limit": {
+                    "type": "keyword"
+                  },
+                  "non_numeric_value": {
+                    "type": "keyword"
+                  },
+                  "references": {
+                    "type": "keyword"
+                  },
+                  "type": {
+                    "type": "keyword"
+                  },
+                  "units": {
+                    "type": "keyword"
+                  },
+                  "uuid": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "defining": {
+                "type": "keyword"
+              },
+              "monomer_substance": {
+                "properties": {
+                  "linking_id": {
+                    "type": "keyword"
+                  },
+                  "name": {
+                    "type": "keyword"
+                  },
+                  "ref_pname": {
+                    "type": "keyword"
+                  },
+                  "references": {
+                    "type": "keyword"
+                  },
+                  "refuuid": {
+                    "type": "keyword"
+                  },
+                  "substance_class": {
+                    "type": "keyword"
+                  },
+                  "unii": {
+                    "type": "keyword"
+                  },
+                  "uuid": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "type": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "references": {
+            "type": "keyword"
+          },
+          "structural_units": {
+            "properties": {
+              "amount": {
+                "properties": {
+                  "average": {
+                    "type": "keyword"
+                  },
+                  "high": {
+                    "type": "keyword"
+                  },
+                  "high_limit": {
+                    "type": "keyword"
+                  },
+                  "low": {
+                    "type": "keyword"
+                  },
+                  "low_limit": {
+                    "type": "keyword"
+                  },
+                  "non_numeric_value": {
+                    "type": "keyword"
+                  },
+                  "references": {
+                    "type": "keyword"
+                  },
+                  "type": {
+                    "type": "keyword"
+                  },
+                  "units": {
+                    "type": "keyword"
+                  },
+                  "uuid": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "attachment_count": {
+                "type": "keyword"
+              },
+              "attachment_map": {
+                "type": "keyword"
+              },
+              "label": {
+                "type": "keyword"
+              },
+              "structure": {
+                "type": "keyword"
+              },
+              "type": {
+                "type": "keyword"
+              }
+            }
+          },
+          "uuid": {
+            "type": "keyword"
+          }
+        }
+      },
+      "properties":{
+        "properties": {
+          "defining": {
+            "type": "keyword"
+          },
+          "name": {
+            "type": "keyword"
+          },
+          "parameters": {
+            "properties": {
+              "name": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "type": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              },
+              "value": {
+                "properties": {
+                  "average": {
+                    "type": "keyword"
+                  },
+                  "high": {
+                    "type": "keyword"
+                  },
+                  "low": {
+                    "type": "keyword"
+                  },
+                  "non_numeric_value": {
+                    "type": "keyword"
+                  },
+                  "references": {
+                    "type": "keyword"
+                  },
+                  "type": {
+                    "type": "keyword"
+                  },
+                  "units": {
+                    "type": "keyword"
+                  },
+                  "uuid": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "property_type": {
+            "type": "keyword"
+          },
+          "value": {
+            "properties": {
+              "average": {
+                "type": "keyword"
+              },
+              "high": {
+                "type": "keyword"
+              },
+              "high_limit": {
+                "type": "keyword"
+              },
+              "low": {
+                "type": "keyword"
+              },
+              "low_limit": {
+                "type": "keyword"
+              },
+              "non_numeric_value": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "type": {
+                "type": "keyword"
+              },
+              "units": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "references": {
+            "type": "keyword"
+          },
+          "type": {
+            "type": "keyword"
+          },
+          "uuid": {
+            "type": "keyword"
+          }
+        }
+      },
+      "protein":{
+        "properties": {
+          "disulfide_links": {
+            "properties": {
+              "sites": {
+                "properties": {
+                  "residue_index": {
+                    "type": "keyword"
+                  },
+                  "subunit_index": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "glycosylation": {
+            "properties": {
+              "c_glycosylation_sites": {
+                "properties": {
+                  "residue_index": {
+                    "type": "keyword"
+                  },
+                  "subunit_index": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "glycosylation_type": {
+                "type": "keyword"
+              },
+              "n_glycosylation_sites": {
+                "properties": {
+                  "residue_index": {
+                    "type": "keyword"
+                  },
+                  "subunit_index": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "o_glycosylation_sites": {
+                "properties": {
+                  "residue_index": {
+                    "type": "keyword"
+                  },
+                  "subunit_index": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "other_links": {
+            "properties": {
+              "linkage_type": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "sites": {
+                "properties": {
+                  "residue_index": {
+                    "type": "keyword"
+                  },
+                  "subunit_index": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "protein_sub_type": {
+            "type": "keyword"
+          },
+          "protein_type": {
+            "type": "keyword"
+          },
+          "references": {
+            "type": "keyword"
+          },
+          "sequence_origin": {
+            "type": "keyword"
+          },
+          "sequence_type": {
+            "type": "keyword"
+          },
+          "subunits": {
+            "properties": {
+              "linkage": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "sequence": {
+                "type": "keyword"
+              },
+              "subunit_index": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "uuid": {
+            "type": "keyword"
+          }
+        }
+      },
+      "references":{
+        "properties": {
+          "citation": {
+            "type": "keyword"
+          },
+          "doc_type": {
+            "type": "keyword"
+          },
+          "document_date": {
+            "type": "keyword"
+          },
+          "id": {
+            "type": "keyword"
+          },
+          "public_domain": {
+            "type": "keyword"
+          },
+          "tags": {
+            "type": "keyword"
+          },
+          "url": {
+            "type": "keyword"
+          },
+          "uuid": {
+            "type": "keyword"
+          }
+        }
+      },
+      "relationships":{
+        "properties": {
+          "amount": {
+            "properties": {
+              "average": {
+                "type": "keyword"
+              },
+              "high": {
+                "type": "keyword"
+              },
+              "high_limit": {
+                "type": "keyword"
+              },
+              "low": {
+                "type": "keyword"
+              },
+              "low_limit": {
+                "type": "keyword"
+              },
+              "non_numeric_value": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "type": {
+                "type": "keyword"
+              },
+              "units": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "comments": {
+            "type": "keyword"
+          },
+          "interaction_type": {
+            "type": "keyword"
+          },
+          "mediator_substance": {
+            "properties": {
+              "linking_id": {
+                "type": "keyword"
+              },
+              "name": {
+                "type": "keyword"
+              },
+              "ref_pname": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "refuuid": {
+                "type": "keyword"
+              },
+              "substance_class": {
+                "type": "keyword"
+              },
+              "unii": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "qualification": {
+            "type": "keyword"
+          },
+          "references": {
+            "type": "keyword"
+          },
+          "type": {
+            "type": "keyword"
+          },
+          "uuid": {
+            "type": "keyword"
+          },
+          "related_substance": {
+            "properties": {
+              "linking_id": {
+                "type": "keyword"
+              },
+              "name": {
+                "type": "keyword"
+              },
+              "ref_pname": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "refuuid": {
+                "type": "keyword"
+              },
+              "substance_class": {
+                "type": "keyword"
+              },
+              "unii": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "structurally_diverse":{
+        "properties": {
+          "developmental_stage": {
+            "type": "keyword"
+          },
+          "fraction_material_type": {
+            "type": "keyword"
+          },
+          "fraction_name": {
+            "type": "keyword"
+          },
+          "hybrid_species_maternal_organism": {
+            "properties": {
+              "linking_id": {
+                "type": "keyword"
+              },
+              "name": {
+                "type": "keyword"
+              },
+              "ref_pname": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "refuuid": {
+                "type": "keyword"
+              },
+              "substance_class": {
+                "type": "keyword"
+              },
+              "unii": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "hybrid_species_paternal_organism": {
+            "properties": {
+              "linking_id": {
+                "type": "keyword"
+              },
+              "name": {
+                "type": "keyword"
+              },
+              "ref_pname": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "refuuid": {
+                "type": "keyword"
+              },
+              "substance_class": {
+                "type": "keyword"
+              },
+              "unii": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "infra_specific_name": {
+            "type": "keyword"
+          },
+          "infra_specific_type": {
+            "type": "keyword"
+          },
+          "organism_author": {
+            "type": "keyword"
+          },
+          "organism_family": {
+            "type": "keyword"
+          },
+          "organism_genus": {
+            "type": "keyword"
+          },
+          "organism_species": {
+            "type": "keyword"
+          },
+          "parent_substance": {
+            "properties": {
+              "linking_id": {
+                "type": "keyword"
+              },
+              "name": {
+                "type": "keyword"
+              },
+              "ref_pname": {
+                "type": "keyword"
+              },
+              "references": {
+                "type": "keyword"
+              },
+              "refuuid": {
+                "type": "keyword"
+              },
+              "substance_class": {
+                "type": "keyword"
+              },
+              "unii": {
+                "type": "keyword"
+              },
+              "uuid": {
+                "type": "keyword"
+              }
+            }
+          },
+          "part": {
+            "type": "keyword"
+          },
+          "part_location": {
+            "type": "keyword"
+          },
+          "references": {
+            "type": "keyword"
+          },
+          "source_material_class": {
+            "type": "keyword"
+          },
+          "source_material_state": {
+            "type": "keyword"
+          },
+          "source_material_type": {
+            "type": "keyword"
+          },
+          "uuid": {
+            "type": "keyword"
+          }
+        }
+      },
+      "structure":{
+        "properties": {
+          "atropisomerism": {
+            "type": "keyword"
+          },
+          "charge": {
+            "type": "keyword"
+          },
+          "count": {
+            "type": "keyword"
+          },
+          "defined_stereo": {
+            "type": "keyword"
+          },
+          "ez_centers": {
+            "type": "keyword"
+          },
+          "formula": {
+            "type": "keyword"
+          },
+          "id": {
+            "type": "keyword"
+          },
+          "molecular_weight": {
+            "type": "float"
+          },
+          "molfile": {
+            "index": false,
+            "type": "text"
+          },
+          "optical_activity": {
+            "type": "keyword"
+          },
+          "references": {
+            "type": "keyword"
+          },
+          "smiles": {
+            "type": "keyword"
+          },
+          "stereochemistry": {
+            "type": "keyword"
+          },
+          "stereo_centers": {
+            "type": "keyword"
+          },
+          "stereo_comments": {
+            "type": "text"
+          }
+        }
+      }
+    }
+  }
+}

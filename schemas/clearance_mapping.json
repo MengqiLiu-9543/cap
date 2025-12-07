@@ -1,0 +1,206 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "properties": {
+      "@checksum": {
+        "type": "keyword"
+      },
+      "address_1": {
+        "type": "text"
+      },
+      "address_2": {
+        "type": "text"
+      },
+      "advisory_committee": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "advisory_committee_description": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "keyword"
+      },
+      "applicant": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "city": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "clearance_type": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "contact": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "country_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "keyword"
+      },
+      "date_received": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "decision_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "decision_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "device_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "expedited_review_flag": {
+        "type": "text",
+        "fields" : {
+          "exact": { "type": "keyword" }
+        }
+      },
+      "k_number": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "openfda": {
+        "properties": {
+          "device_class": {
+            "type": "keyword"
+          },
+          "device_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "fei_number": {
+            "type": "keyword"
+          },
+          "k_number": {
+            "type": "keyword"
+          },
+          "medical_specialty_description": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "pma_number": {
+            "type": "keyword"
+          },
+          "registration_number": {
+            "type": "keyword"
+          },
+          "regulation_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "postal_code": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "product_code": {
+        "type": "keyword"
+      },
+      "review_advisory_committee": {
+        "type": "keyword"
+      },
+      "ssp_indicator": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "state": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "statement_or_summary": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "third_party_flag": {
+        "type": "keyword"
+      },
+      "zip": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "properties": {
+      "nonuser_affected": {
+        "type": "keyword"
+      },
+      "number_health_problems": {
+        "type": "integer"
+      },
+      "number_product_problems": {
+        "type": "integer"
+      },
+      "number_tobacco_products": {
+        "type": "integer"
+      },
+      "tobacco_products": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "report_id": {
+        "type": "integer"
+      },
+      "reported_health_problems": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "reported_product_problems": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "date_submitted": {
+        "type": "date",
+        "format": "MM/dd/yyyy||basic_date||date||epoch_millis"
+      }
+    }
+  }
+}

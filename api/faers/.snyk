@@ -1,0 +1,299 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.22.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-MINIMIST-559764:
+    - coveralls > minimist:
+        reason: None given
+        expires: '2021-09-09T14:50:59.805Z'
+    - grunt-contrib-nodeunit > nodeunit > tap > nyc > istanbul-reports > handlebars > optimist > minimist:
+        reason: None given
+        expires: '2021-09-09T14:50:59.805Z'
+  'npm:utile:20180614':
+    - broadway > utile:
+        reason: None given
+        expires: '2021-07-09T14:50:59.805Z'
+    - flatiron > broadway > utile:
+        reason: None given
+        expires: '2021-07-09T14:50:59.805Z'
+    - flatiron > prompt > utile:
+        reason: None given
+        expires: '2021-07-09T14:50:59.805Z'
+  SNYK-JS-LODASH-567746:
+    - elasticsearch > lodash:
+        reason: None given
+        expires: '2021-07-15T19:19:02.057Z'
+    - elastic.js > elasticsearch > lodash:
+        reason: None given
+        expires: '2021-07-15T19:19:02.057Z'
+  SNYK-JS-Y18N-1021887:
+    - snyk > snyk-config > nconf > yargs > y18n:
+        reason: no patch available
+        expires: '2021-03-13T14:03:25.344Z'
+    - snyk > snyk-nodejs-lockfile-parser > snyk-config > nconf > yargs > y18n:
+        reason: No remediation available; threat low
+        expires: '2020-12-10T19:29:19.194Z'
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > snyk-config > nconf > yargs > y18n:
+        reason: No remediation available; threat low
+        expires: '2020-12-10T19:29:19.195Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > snyk-config > nconf > yargs > y18n:
+        reason: No remediation available; threat low
+        expires: '2020-12-10T19:29:19.195Z'
+  SNYK-JS-GLOBPARENT-1016905:
+    - grunt-contrib-nodeunit > nodeunit > tap > nyc > test-exclude > micromatch > parse-glob > glob-base > glob-parent:
+        reason: None given
+        expires: '2021-07-09T14:50:59.805Z'
+    - grunt-contrib-nodeunit > nodeunit > tap > nyc > micromatch > parse-glob > glob-base > glob-parent:
+        reason: None given
+        expires: '2021-07-09T14:50:59.804Z'
+  SNYK-JS-OBJECTPATH-1017036:
+    - object-path:
+        reason: None given
+        expires: '2021-06-09T14:31:55.278Z'
+  SNYK-JS-LODASH-1018905:
+    - elastic.js > elasticsearch > lodash:
+        reason: None given
+        expires: '2021-09-05T16:43:30.890Z'
+    - elasticsearch > lodash:
+        reason: None given
+        expires: '2021-09-05T16:43:30.890Z'
+    - snyk > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.801Z'
+    - snyk > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.801Z'
+    - snyk > inquirer > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-cpp-plugin > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-docker-plugin > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-go-plugin > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-gradle-plugin > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-gradle-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > snyk-php-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > snyk-python-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > snyk-gradle-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > snyk-mvn-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > snyk-python-plugin > snyk-poetry-lockfile-parser > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > snyk-nodejs-lockfile-parser > @yarnpkg/core > lodash:
+        reason: None given
+        expires: '2021-09-05T19:16:21.912Z'
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > @yarnpkg/core > lodash:
+        reason: None given
+        expires: '2021-09-05T19:16:21.912Z'
+  SNYK-JS-LODASH-1040724:
+    - elastic.js > elasticsearch > lodash:
+        reason: None given
+        expires: '2021-09-05T14:50:59.801Z'
+    - elasticsearch > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.801Z'
+    - snyk > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.801Z'
+    - snyk > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > inquirer > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-cpp-plugin > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-docker-plugin > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-go-plugin > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-gradle-plugin > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-gradle-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.802Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > snyk-php-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > snyk-python-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > snyk-gradle-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > snyk-mvn-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - snyk > snyk-python-plugin > snyk-poetry-lockfile-parser > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - elasticsearch > lodash:
+        reason: None given
+        expires: '2021-09-05T16:43:30.890Z'
+    - snyk > snyk-nodejs-lockfile-parser > @yarnpkg/core > lodash:
+        reason: None given
+        expires: '2021-09-05T19:16:21.912Z'
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > @yarnpkg/core > lodash:
+        reason: None given
+        expires: '2021-09-05T19:16:21.912Z'
+  'npm:brace-expansion:20170302':
+    - minimatch > brace-expansion:
+        reason: None given
+        expires: '2021-07-09T14:50:59.801Z'
+  'npm:hoek:20180212':
+    - boom > hoek:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - coveralls > request > hawk > hoek:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - coveralls > request > hawk > boom > hoek:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - coveralls > request > hawk > sntp > hoek:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - coveralls > request > hawk > cryptiles > boom > hoek:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+  'npm:request:20160119':
+    - broadway > winston > request:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - broadway > cliff > winston > request:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - flatiron > broadway > winston > request:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - flatiron > prompt > winston > request:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+    - flatiron > broadway > cliff > winston > request:
+        reason: None given
+        expires: '2021-07-09T14:50:59.803Z'
+  'npm:tunnel-agent:20170305':
+    - coveralls > request > tunnel-agent:
+        reason: None given
+        expires: '2021-07-09T14:50:59.804Z'
+  SNYK-JS-JSYAML-173999:
+    - coveralls > js-yaml:
+        reason: None given
+        expires: '2021-07-09T14:50:59.805Z'
+  SNYK-JS-JSYAML-174129:
+    - coveralls > js-yaml:
+        reason: None given
+        expires: '2021-07-09T14:50:59.805Z'
+  SNYK-JS-NORMALIZEURL-1296539:
+    - snyk > snyk-nodejs-lockfile-parser > got > cacheable-request > normalize-url:
+        reason: None given
+        expires: '2022-07-14T16:50:42.454Z'
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > got > cacheable-request > normalize-url:
+        reason: None given
+        expires: '2022-07-14T16:50:42.455Z'
+    - snyk > update-notifier > latest-version > package-json > got > cacheable-request > normalize-url:
+        reason: None given
+        expires: '2022-07-14T16:50:42.455Z'
+  SNYK-JS-REQUEST-1314897:
+    - request:
+        reason: None given
+        expires: '2021-12-17T18:51:03.354Z'
+  SNYK-JS-ANSIREGEX-1583908:
+    - elasticsearch > chalk > has-ansi > ansi-regex:
+        reason: None given
+        expires: '2022-01-15T14:50:51.015Z'
+    - elasticsearch > chalk > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2022-01-15T14:50:51.015Z'
+    - elastic.js > elasticsearch > chalk > has-ansi > ansi-regex:
+        reason: None given
+        expires: '2022-01-15T14:50:51.015Z'
+    - elastic.js > elasticsearch > chalk > strip-ansi > ansi-regex:
+        reason: None given
+        expires: '2022-01-15T14:50:51.015Z'
+  SNYK-JS-JSONSCHEMA-1920922:
+    - request > http-signature > jsprim > json-schema:
+        reason: None given
+        expires: '2022-01-15T14:50:51.015Z'
+patch: {}

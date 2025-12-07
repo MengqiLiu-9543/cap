@@ -1,0 +1,10 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "dynamic": true
+  }
+}

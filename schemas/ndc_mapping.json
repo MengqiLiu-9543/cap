@@ -1,0 +1,350 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "properties": {
+      "product_id": {
+        "type": "keyword"
+      },
+      "product_ndc": {
+        "type": "keyword"
+      },
+      "spl_id": {
+        "type": "keyword"
+      },
+      "product_type": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "finished": {
+        "type": "boolean"
+      },
+      "brand_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "brand_name_base": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "brand_name_suffix": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "generic_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "dosage_form": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "route": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "marketing_start_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date",
+        "ignore_malformed": true
+      },
+      "marketing_end_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date",
+        "ignore_malformed": true
+      },
+      "marketing_category": {
+        "type": "keyword"
+      },
+      "application_number": {
+        "type": "keyword"
+      },
+      "labeler_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "active_ingredients": {
+        "properties": {
+          "name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "strength": {
+            "type": "keyword"
+          }
+        }
+      },
+      "pharm_class": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "dea_schedule": {
+        "type": "keyword"
+      },
+      "listing_expiration_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date",
+        "ignore_malformed": true
+      },
+      "packaging": {
+        "properties": {
+          "package_ndc": {
+            "type": "keyword"
+          },
+          "description": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "marketing_start_date": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date",
+            "ignore_malformed": true
+          },
+          "marketing_end_date": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date",
+            "ignore_malformed": true
+          },
+          "sample": {
+            "type": "boolean"
+          }
+        }
+      },
+      "openfda": {
+        "properties": {
+          "application_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "brand_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "dosage_form": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "generic_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "is_original_packager": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "boolean"
+          },
+          "manufacturer_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "nui": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "package_ndc": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "pharm_class_cs": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "pharm_class_epc": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "pharm_class_moa": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "pharm_class_pe": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "product_ndc": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "product_type": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "route": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "rxcui": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "rxstring": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "rxtty": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "spl_id": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "spl_set_id": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "substance_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "unii": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "upc": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      }
+    }
+  }
+}

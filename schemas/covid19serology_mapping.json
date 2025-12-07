@@ -1,0 +1,115 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "properties": {
+      "evaluation_id": {
+        "type": "keyword"
+      },
+      "manufacturer": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "device": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "date_performed": {
+        "format": "M/d/yyyy||basic_date||date_time_no_millis||date||epoch_millis",
+        "type": "date"
+      },
+      "lot_number": {
+        "type": "keyword"
+      },
+      "panel": {
+        "type": "keyword"
+      },
+      "sample_no": {
+        "type": "integer"
+      },
+      "sample_id": {
+        "type": "keyword"
+      },
+      "type": {
+        "type": "keyword"
+      },
+      "group": {
+        "type": "keyword"
+      },
+      "days_from_symptom": {
+        "type": "keyword"
+      },
+      "igm_result": {
+        "type": "keyword"
+      },
+      "igg_result": {
+        "type": "keyword"
+      },
+      "iga_result": {
+        "type": "keyword"
+      },
+      "pan_result": {
+        "type": "keyword"
+      },
+      "igm_igg_result": {
+        "type": "keyword"
+      },
+      "igm_iga_result": {
+        "type": "keyword"
+      },
+      "control": {
+        "type": "keyword"
+      },
+      "pan_titer": {
+        "type": "keyword"
+      },
+      "igm_titer": {
+        "type": "keyword"
+      },
+      "igg_titer": {
+        "type": "keyword"
+      },
+      "igm_truth": {
+        "type": "keyword"
+      },
+      "igg_truth": {
+        "type": "keyword"
+      },
+      "antibody_truth": {
+        "type": "keyword"
+      },
+      "igm_agree": {
+        "type": "keyword"
+      },
+      "igg_agree": {
+        "type": "keyword"
+      },
+      "iga_agree": {
+        "type": "keyword"
+      },
+      "pan_agree": {
+        "type": "keyword"
+      },
+      "igm_igg_agree": {
+        "type": "keyword"
+      },
+      "igm_iga_agree": {
+        "type": "keyword"
+      },
+      "antibody_agree": {
+        "type": "keyword"
+      }
+    }
+  }
+}

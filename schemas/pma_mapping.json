@@ -1,0 +1,154 @@
+{
+  "_doc": {
+    "properties": {
+      "@checksum": {
+        "type": "keyword"
+      },
+      "advisory_committee": {
+        "type": "keyword"
+      },
+      "advisory_committee_description": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "ao_statement": {
+        "type": "text"
+      },
+      "applicant": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "city": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "date_received": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "decision_code": {
+        "type": "keyword"
+      },
+      "decision_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "docket_number": {
+        "type": "keyword"
+      },
+      "fed_reg_notice_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "generic_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "openfda": {
+        "properties": {
+          "device_class": {
+            "type": "keyword"
+          },
+          "device_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "fei_number": {
+            "type": "keyword"
+          },
+          "k_number": {
+            "type": "keyword"
+          },
+          "medical_specialty_description": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "pma_number": {
+            "type": "keyword"
+          },
+          "registration_number": {
+            "type": "keyword"
+          },
+          "regulation_number": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "pma_number": {
+        "type": "keyword"
+      },
+      "product_code": {
+        "type": "keyword"
+      },
+      "expedited_review_flag": {
+        "type": "keyword"
+      },
+      "state": {
+        "type": "keyword"
+      },
+      "street_1": {
+        "type": "text"
+      },
+      "street_2": {
+        "type": "text"
+      },
+      "supplement_number": {
+        "type": "keyword"
+      },
+      "supplement_reason": {
+        "type": "text"
+      },
+      "supplement_type": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "trade_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "zip": {
+        "type": "keyword"
+      },
+      "zip_ext": {
+        "type": "keyword"
+      }
+    }
+  }
+}

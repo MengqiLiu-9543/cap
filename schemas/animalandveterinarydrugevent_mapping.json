@@ -1,0 +1,536 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "properties": {
+      "@id": {
+        "type": "keyword"
+      },
+      "@checksum": {
+        "type": "keyword"
+      },
+      "unique_aer_id_number": {
+        "type": "keyword"
+      },
+      "report_id": {
+        "type": "keyword"
+      },
+      "original_receive_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "receiver": {
+        "properties": {
+          "organization": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "street_address": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "city": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "state": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "postal_code": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "country": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "primary_reporter": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "secondary_reporter": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "type_of_information": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "serious_ae": {
+        "type": "boolean"
+      },
+      "number_of_animals_treated": {
+        "type": "integer"
+      },
+      "number_of_animals_affected": {
+        "type": "integer"
+      },
+      "animal": {
+        "properties": {
+          "species": {
+            "type": "keyword"
+          },
+          "gender": {
+            "type": "keyword"
+          },
+          "reproductive_status": {
+            "type": "keyword"
+          },
+          "female_animal_physiological_status": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "age": {
+            "properties": {
+              "min": {
+                "type": "float"
+              },
+              "max": {
+                "type": "float"
+              },
+              "unit": {
+                "type": "keyword"
+              },
+              "qualifier": {
+                "type": "keyword"
+              }
+            }
+          },
+          "weight": {
+            "properties": {
+              "min": {
+                "type": "float"
+              },
+              "max": {
+                "type": "float"
+              },
+              "unit": {
+                "type": "keyword"
+              },
+              "qualifier": {
+                "type": "keyword"
+              }
+            }
+          },
+          "breed": {
+            "properties": {
+              "is_crossbred": {
+                "type": "boolean"
+              },
+              "breed_component": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "outcome": {
+        "properties": {
+          "medical_status": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "number_of_animals_affected": {
+            "type": "integer"
+          }
+        }
+      },
+      "health_assessment_prior_to_exposure": {
+        "properties": {
+          "condition": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "assessed_by": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "onset_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "duration": {
+        "properties": {
+          "value": {
+            "type": "keyword"
+          },
+          "unit": {
+            "type": "keyword"
+          }
+        }
+      },
+      "reaction": {
+        "properties": {
+          "veddra_version": {
+            "type": "integer"
+          },
+          "veddra_term_code": {
+            "type": "keyword"
+          },
+          "veddra_term_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "number_of_animals_affected": {
+            "type": "integer"
+          },
+          "accuracy": {
+            "type": "keyword"
+          }
+        }
+      },
+      "time_between_exposure_and_onset": {
+        "type": "keyword"
+      },
+      "treated_for_ae": {
+        "type": "boolean"
+      },
+      "drug": {
+        "properties": {
+          "first_exposure_date": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "last_exposure_date": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "frequency_of_administration": {
+            "properties": {
+              "value": {
+                "type": "float"
+              },
+              "unit": {
+                "type": "keyword"
+              }
+            }
+          },
+          "administered_by": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "route": {
+            "type": "keyword"
+          },
+          "dose": {
+            "properties": {
+              "numerator": {
+                "type": "float"
+              },
+              "numerator_unit": {
+                "type": "keyword"
+              },
+              "denominator": {
+                "type": "float"
+              },
+              "denominator_unit": {
+                "type": "keyword"
+              }
+            }
+          },
+          "used_according_to_label": {
+            "type": "boolean"
+          },
+          "off_label_use": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "previous_exposure_to_drug": {
+            "type": "boolean"
+          },
+          "previous_ae_to_drug": {
+            "type": "boolean"
+          },
+          "ae_abated_after_stopping_drug": {
+            "type": "boolean"
+          },
+          "ae_reappeared_after_resuming_drug": {
+            "type": "boolean"
+          },
+          "manufacturing_date": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "lot_number": {
+            "type": "keyword"
+          },
+          "lot_expiration": {
+            "format": "year_month||basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "product_ndc": {
+            "type": "keyword"
+          },
+          "brand_name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "openfda": {
+            "properties": {
+              "application_number": {
+                "type": "keyword"
+              },
+              "brand_name": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "dosage_form": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "generic_name": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "is_original_packager": {
+                "type": "boolean"
+              },
+              "manufacturer_name": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "nui": {
+                "type": "keyword"
+              },
+              "package_ndc": {
+                "type": "keyword"
+              },
+              "pharm_class_cs": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "pharm_class_epc": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "pharm_class_moa": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "pharm_class_pe": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "product_ndc": {
+                "type": "keyword"
+              },
+              "product_type": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "route": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "rxcui": {
+                "type": "keyword"
+              },
+              "rxstring": {
+                "type": "keyword"
+              },
+              "rxtty": {
+                "type": "keyword"
+              },
+              "spl_id": {
+                "type": "keyword"
+              },
+              "spl_set_id": {
+                "type": "keyword"
+              },
+              "substance_name": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "unii": {
+                "type": "keyword"
+              },
+              "upc": {
+                "type": "keyword"
+              }
+            }
+          },
+          "dosage_form": {
+            "type": "keyword"
+          },
+          "manufacturer": {
+            "properties": {
+              "name": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "registration_number": {
+                "type": "keyword"
+              }
+            }
+          },
+          "number_of_defective_items": {
+            "type": "integer"
+          },
+          "number_of_items_returned": {
+            "type": "integer"
+          },
+          "atc_vet_code": {
+            "type": "keyword"
+          },
+          "active_ingredients": {
+            "properties": {
+              "name": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "dose": {
+                "properties": {
+                  "numerator": {
+                    "type": "float"
+                  },
+                  "numerator_unit": {
+                    "type": "keyword"
+                  },
+                  "denominator": {
+                    "type": "float"
+                  },
+                  "denominator_unit": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

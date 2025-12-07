@@ -1,0 +1,51 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "properties": {
+      "package_ndc": {
+        "type": "text"
+      },
+      "package_ndc11": {
+        "type": "keyword"
+      },
+      "marketing_category": {
+        "type": "keyword"
+      },
+      "marketing_start_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "marketing_end_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "billing_unit": {
+        "type": "keyword"
+      },
+      "proprietary_name": {
+        "type": "keyword"
+      },
+      "dosage_form": {
+        "type": "keyword"
+      },
+      "application_number_or_citation": {
+        "type": "keyword"
+      },
+      "product_type": {
+        "type": "keyword"
+      },
+      "inactivation_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "reactivation_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      }
+    }
+  }
+}

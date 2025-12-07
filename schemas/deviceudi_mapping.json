@@ -1,0 +1,351 @@
+{
+  "_doc": {
+    "_source": {
+      "includes": [
+        "*"
+      ]
+    },
+    "properties": {
+      "@id": {
+        "type": "keyword"
+      },
+      "@checksum": {
+        "type": "keyword"
+      },
+      "identifiers": {
+        "properties": {
+          "id": {
+            "type": "keyword"
+          },
+          "type": {
+            "type": "keyword"
+          },
+          "issuing_agency": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "unit_of_use_id": {
+            "type": "text"
+          },
+          "quantity_per_package": {
+            "type": "integer"
+          },
+          "package_discontinue_date": {
+            "format": "basic_date||date||epoch_millis",
+            "type": "date"
+          },
+          "package_status": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "package_type": {
+            "type": "text"
+          }
+        }
+      },
+      "public_version_status": {
+        "type": "keyword"
+      },
+      "public_device_record_key": {
+        "type": "keyword"
+      },
+      "public_version_number": {
+        "type": "keyword"
+      },
+      "public_version_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "labeler_duns_number": {
+        "type": "keyword"
+      },
+      "record_status": {
+        "type": "keyword"
+      },
+      "publish_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "commercial_distribution_end_date": {
+        "format": "basic_date||date||epoch_millis",
+        "type": "date"
+      },
+      "commercial_distribution_status": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "brand_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "version_or_model_number": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "catalog_number": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "company_name": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "device_count_in_base_package": {
+        "type": "integer"
+      },
+      "device_description": {
+        "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+        "type": "text"
+      },
+      "is_direct_marking_exempt": {
+        "type": "boolean"
+      },
+      "is_pm_exempt": {
+        "type": "boolean"
+      },
+      "is_hct_p": {
+        "type": "boolean"
+      },
+      "is_kit": {
+        "type": "boolean"
+      },
+      "is_combination_product": {
+        "type": "boolean"
+      },
+      "is_single_use": {
+        "type": "boolean"
+      },
+      "has_lot_or_batch_number": {
+        "type": "boolean"
+      },
+      "has_serial_number": {
+        "type": "boolean"
+      },
+      "has_manufacturing_date": {
+        "type": "boolean"
+      },
+      "has_expiration_date": {
+        "type": "boolean"
+      },
+      "has_donation_id_number": {
+        "type": "boolean"
+      },
+      "is_labeled_as_nrl": {
+        "type": "boolean"
+      },
+      "is_labeled_as_no_nrl": {
+        "type": "boolean"
+      },
+      "is_rx": {
+        "type": "boolean"
+      },
+      "is_otc": {
+        "type": "boolean"
+      },
+      "mri_safety": {
+        "fields": {
+          "exact": {
+            "type": "keyword"
+          }
+        },
+        "type": "text"
+      },
+      "customer_contacts": {
+        "properties": {
+          "phone": {
+            "type": "keyword"
+          },
+          "ext": {
+            "type": "keyword"
+          },
+          "email": {
+            "type": "keyword"
+          }
+        }
+      },
+      "gmdn_terms": {
+        "properties": {
+          "name": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "definition": {
+            "type": "text"
+          }
+        }
+      },
+      "product_codes": {
+        "properties": {
+          "code": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "keyword"
+          },
+          "name": {
+            "type": "text"
+          },
+          "openfda": {
+            "properties": {
+              "device_class": {
+                "type": "keyword"
+              },
+              "device_name": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "medical_specialty_description": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              },
+              "regulation_number": {
+                "fields": {
+                  "exact": {
+                    "type": "keyword"
+                  }
+                },
+                "type": "text"
+              }
+            }
+          }
+        }
+      },
+      "device_sizes": {
+        "properties": {
+          "unit": {
+            "type": "keyword"
+          },
+          "value": {
+            "type": "keyword"
+          },
+          "type": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "text": {
+            "type": "text"
+          }
+        }
+      },
+      "storage": {
+        "properties": {
+          "type": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          },
+          "high": {
+            "properties": {
+              "unit": {
+                "type": "keyword"
+              },
+              "value": {
+                "type": "keyword"
+              }
+            }
+          },
+          "low": {
+            "properties": {
+              "unit": {
+                "type": "keyword"
+              },
+              "value": {
+                "type": "keyword"
+              }
+            }
+          },
+          "special_conditions": {
+            "fields": {
+              "exact": {
+                "type": "keyword"
+              }
+            },
+            "type": "text"
+          }
+        }
+      },
+      "sterilization": {
+        "properties": {
+          "is_sterile": {
+            "type": "boolean"
+          },
+          "is_sterilization_prior_use": {
+            "type": "boolean"
+          },
+          "sterilization_methods": {
+            "type": "text"
+          }
+        }
+      },
+      "fei_numbers": {
+        "type": "keyword"
+      },
+      "premarket_submissions": {
+        "properties": {
+          "submission_number": {
+            "type": "keyword"
+          },
+          "supplement_number": {
+            "type": "keyword"
+          },
+          "submission_type": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }
+}
