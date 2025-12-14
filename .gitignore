@@ -77,3 +77,4 @@ task5_severity_prediction/*.pkl
 task5_severity_prediction/*.pkl
 task5_severity_prediction/*.pkl
 __pycache__/
+task5_final/*.pkl
