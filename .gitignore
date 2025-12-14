@@ -74,6 +74,6 @@ watchdog
 /nose2-junit.xml
 /coverage.xml
 task5_severity_prediction/*.pkl
-task5_final/*.pkl
-*.pkl
+task5_severity_prediction/*.pkl
+task5_severity_prediction/*.pkl
 __pycache__/
