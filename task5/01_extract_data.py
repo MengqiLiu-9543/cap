@@ -91,13 +91,8 @@ def collect_drug_data(drug_name, max_records=500):
         - Extend the search scope with OR queries
     - Deduplicate within the same drug
     """
-<<<<<<< HEAD
-    print(f"\nCollecting drug: {drug_name}")
-    
-=======
     print(f"\n Collecting drug: {drug_name}")
 
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     all_records = []
     seen_ids = set()  # per-drug deduplication
     skip = 0
@@ -152,12 +147,8 @@ def collect_drug_data(drug_name, max_records=500):
 
                 # Stop early if the entire page is duplicate
                 if new_records_count == 0 and len(results) > 0:
-<<<<<<< HEAD
-                    print("   Warning: Current page contains only duplicates, stopping collection")
-=======
                     print(
                         " WARNING: Current page contains only duplicates, stopping collection")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
                     break
 
                 print(f" Progress: {len(all_records)} (new {new_records_count} this page)", end='\r')
@@ -168,58 +159,35 @@ def collect_drug_data(drug_name, max_records=500):
                 time.sleep(0.3)
 
             elif response.status_code == 404:
-<<<<<<< HEAD
-                print("   No data found")
-=======
                 print(" WARNING: No data found")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
                 break
             else:
 
                 retries += 1
                 if retries >= max_retries:
-<<<<<<< HEAD
-                    print(f"   HTTP {response.status_code}, reached max retries")
-=======
                     print(f" ERROR: HTTP {response.status_code}, reached max retries")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
                     break
 
                 # Exponential backoff (handles 429/5xx)
                 delay = RETRY_DELAY * (2 ** (retries - 1))  # 5s, 10s, 20s
-<<<<<<< HEAD
-                print(f"   HTTP {response.status_code}, retry {retries}/{max_retries} after {delay}s")
-=======
                 print(
                     f" WARNING: HTTP response.status_code}, retry {retries}/{max_retries} after {delay}s")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
                 time.sleep(delay)
 
         except Exception as e:
             retries += 1
             if retries >= max_retries:
-<<<<<<< HEAD
-                print(f"   Error: {str(e)[:50]}, reached max retries")
-=======
                 print(f" ERROR: Error: {str(e)[:50]}, reached max retries")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
                 break
 
             # Exponential backoff on exception
             delay = RETRY_DELAY * (2 ** (retries - 1))
-<<<<<<< HEAD
-            print(f"   Error: {str(e)[:50]}, retry {retries}/{max_retries} after {delay}s")
-            time.sleep(delay)
-    
-    print(f"   Completed: {len(all_records)} records")
-=======
             print(
                 f" WARNING: Error: str(e)[
                         :50]}, retry {retries}/{max_retries} after {delay}s")
             time.sleep(delay)
 
     print(f" Completed: {len(all_records)} records")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     return all_records
 
 
@@ -345,30 +313,18 @@ def main():
     print()
 
     # Show drug list
-<<<<<<< HEAD
-    print("Drug list:")
-=======
     print(" Drug list:")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     for i, drug in enumerate(ONCOLOGY_DRUGS, 1):
         print(f" {i:2d}. {drug}")
     print()
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     # Non-interactive mode: automatically start data collection
     response = 'y'  # Default to 'y' for automated runs
     # response = input("Start data collection? (y/n, default y): ").strip().lower()
     # if response in ['n', 'no']:
     #     print("Cancelled")
     #     return
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print()
     print("=" * 80)
     print("Starting data collection")
@@ -420,46 +376,28 @@ def main():
                 print(f"Checkpoint saved: {temp_file}")
 
         except Exception as e:
-<<<<<<< HEAD
-            print(f"   Processing failed: {str(e)[:50]}")
-=======
             print(f" ERROR: Processing failed: {str(e)[:50]}")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
             failed_drugs.append(drug)
 
     elapsed_time = time.time() - start_time
 
     print()
     print("=" * 80)
-<<<<<<< HEAD
-    print("Data collection finished")
-=======
     print(" Data collection finished")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print("=" * 80)
     print()
 
     if not all_data:
-<<<<<<< HEAD
-        print("Error: no data collected")
-=======
         print("ERROR: Error: no data collected")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
         return
 
     # Convert to DataFrame
     df = pd.DataFrame(all_data)
 
     # Data cleaning summary
-<<<<<<< HEAD
-    print("Cleaning data...")
-    print(f"  Raw records: {len(df)}")
-    
-=======
     print(" Cleaning data...")
     print(f" Raw records: {len(df)}")
 
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     # Deduplicate by safetyreportid
     df = df.drop_duplicates(subset=['safetyreportid'], keep='first')
     print(f" After deduplication: {len(df)}")
@@ -474,25 +412,11 @@ def main():
     df.to_csv(output_file, index=False)
 
     print("=" * 80)
-<<<<<<< HEAD
-    print("Data collection succeeded!")
-=======
     print(" Data collection succeeded!")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print("=" * 80)
     print()
 
     # Summary statistics
-<<<<<<< HEAD
-    print("Data summary:")
-    print(f"  Total records: {len(df):,}")
-    print(f"  Unique reports: {df['safetyreportid'].nunique():,}")
-    print(f"  Unique drugs: {df['target_drug'].nunique()}")
-    print(f"  Successful drugs: {success_count}/{len(ONCOLOGY_DRUGS)}")
-    print()
-    
-    print("Severity distribution:")
-=======
     print(" Data summary:")
     print(f" Total records: {len(df):,}")
     print(f" Unique reports: {df['safetyreportid'].nunique():,}")
@@ -501,7 +425,6 @@ def main():
     print()
 
     print(" Severity distribution:")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     # Convert to numeric (OpenFDA may return strings)
     death_count = pd.to_numeric(
         df['seriousnessdeath'],
@@ -525,13 +448,8 @@ def main():
     print(
         f" Disability: int(disable_count):,}{disable_count / len(df) * 100:.1f}%)")
     print()
-<<<<<<< HEAD
-    
-    print("Patient demographics:")
-=======
 
     print(" Patient demographics:")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     if 'patientsex' in df.columns:
         sex_counts = df['patientsex'].value_counts()
         sex_map = {1: 'Male', 2: 'Female', 0: 'Unknown'}
@@ -548,13 +466,8 @@ def main():
             print(
                 f" Age range: {age_data.min():.1f} - {age_data.max():.1f} years")
     print()
-<<<<<<< HEAD
-    
-    print("Reports per drug:")
-=======
 
     print(" Reports per drug:")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     drug_counts = df['target_drug'].value_counts()
     for drug, count in drug_counts.head(10).items():
         print(f" {drug:20s}: {count:5d}")
@@ -563,23 +476,13 @@ def main():
     print()
 
     if failed_drugs:
-<<<<<<< HEAD
-        print(f"Failed drugs ({len(failed_drugs)}):")
-=======
         print(f"WARNING: Failed drugs ({len(failed_drugs)}):")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
         for drug in failed_drugs:
             print(f" - {drug}")
         print()
-<<<<<<< HEAD
-    
-    print(f"Elapsed time: {elapsed_time/60:.1f} minutes")
-    print(f"Output file: {output_file}")
-=======
 
     print(f"Elapsed time: {elapsed_time / 60:.1f} minutes")
     print(f" Output file: {output_file}")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print()
 
     # Save summary report
@@ -604,24 +507,14 @@ def main():
         if failed_drugs:
             f.write("\nFailed drugs:\n")
             for drug in failed_drugs:
-<<<<<<< HEAD
-                f.write(f"  - {drug}\n")
-    
-    print("Saved summary: task5_collection_summary.txt")
-=======
                 f.write(f" - {drug}\n")
 
     print(" Saved summary: task5_collection_summary.txt")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print()
 
     # Show sample rows
     print("=" * 80)
-<<<<<<< HEAD
-    print("Data sample (first 5 rows)")
-=======
     print(" Data sample (first 5 rows)")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print("=" * 80)
     print()
     sample_cols = [
@@ -637,22 +530,14 @@ def main():
     print()
 
     print("=" * 80)
-<<<<<<< HEAD
-    print("Next steps")
-=======
     print(" Next steps")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print("=" * 80)
     print()
     print("Data is ready for downstream steps:")
     print(" 1. Run: python 02_inspect_data.py")
     print(" 2. Or inspect manually: open main_data.csv")
     print()
-<<<<<<< HEAD
-    print("Tip: Later steps automatically read this file")
-=======
     print(" Tip: Later steps automatically read this file")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print()
 
 

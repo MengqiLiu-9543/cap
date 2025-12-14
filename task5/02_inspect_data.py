@@ -20,20 +20,12 @@ for f in DATA_FILES:
         break
 
 if DATA_FILE is None:
-<<<<<<< HEAD
-    print(f"Error: data file not found")
-=======
     print(f"ERROR: Error: data file not found")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print()
     print("Please run: python 01_extract_data.py")
     sys.exit(1)
 
-<<<<<<< HEAD
-print(f"Data source: {DATA_FILE}")
-=======
 print(f" Data source: {DATA_FILE}")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
 if DATA_FILE == "main_data.csv":
     print("   (Task 5 dataset - 35 oncology drugs)")
 elif DATA_FILE == "oncology_drugs_complete.csv":
@@ -45,24 +37,14 @@ else:
 print()
 
 # Load dataset
-<<<<<<< HEAD
-print("Loading data...")
-df = pd.read_csv(DATA_FILE)
-print(f"Data loaded successfully")
-=======
 print(" Loading data...")
 df = pd.read_csv(DATA_FILE)
 print(f" Data loaded successfully")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
 print()
 
 # Basic info
 print("=" * 80)
-<<<<<<< HEAD
-print("Dataset overview")
-=======
 print(" Dataset overview")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
 print("=" * 80)
 print()
 
@@ -77,11 +59,7 @@ for i, col in enumerate(df.columns, 1):
 
 # Data quality checks
 print("=" * 80)
-<<<<<<< HEAD
-print("Data quality checks")
-=======
 print(" Data quality checks")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
 print("=" * 80)
 print()
 
@@ -92,23 +70,15 @@ if 'safetyreportid' in df.columns:
     print(f" Duplicates: {duplicates}{duplicates / len(df) * 100:.2f}%)")
 
     if duplicates > 0:
-<<<<<<< HEAD
-        print(f"  Warning: duplicate reports detected; deduplicate during preprocessing")
-=======
         print(
             f" WARNING: Warning: duplicate reports detected; deduplicate during preprocessing")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
         # Show sample duplicate IDs
         dup_ids = df[df['safetyreportid'].duplicated(
             keep=False)]['safetyreportid'].unique()[:5]
         print(f" Example duplicate IDs: {', '.join(map(str, dup_ids))}")
     else:
-<<<<<<< HEAD
-        print(f"  No duplicate reports")
-=======
 
         print(f" No duplicate reports")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print()
 
 # Missing values
@@ -126,11 +96,7 @@ missing_df = missing_df[missing_df['Missing'] >
 if len(missing_df) > 0:
     print(missing_df.head(10).to_string(index=False))
 else:
-<<<<<<< HEAD
-    print("  No missing values")
-=======
     print(" No missing values")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
 print()
 
 # Drug distribution (auto-detect column)
@@ -142,11 +108,7 @@ for col in ['target_drug', 'drug_name', 'drugname']:
 
 if drug_col:
     print("=" * 80)
-<<<<<<< HEAD
-    print("Drug distribution")
-=======
     print(" Drug distribution")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print("=" * 80)
     print()
 
@@ -163,11 +125,7 @@ if drug_col:
 # Date range audit
 if 'receivedate' in df.columns:
     print("=" * 80)
-<<<<<<< HEAD
-    print("Report date audit")
-=======
     print(" Report date audit")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print("=" * 80)
     print()
 
@@ -196,19 +154,6 @@ if 'receivedate' in df.columns:
             if pd.notna(year):
                 print(f" {int(year)}: {count:5d} reports")
         else:
-<<<<<<< HEAD
-            print("No valid date values")
-    except Exception as e:
-        print(f"Date parsing failed: {str(e)[:50]}")
-    
-    print()
-
-# Severity analysis
-print("=" * 80)
-print("Severity analysis")
-print("=" * 80)
-print()
-=======
 
             print("WARNING: No valid date values")
     except Exception as e:
@@ -221,7 +166,6 @@ print()
         print(" Severity analysis")
         print("=" * 80)
         print()
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
 
         severity_fields = {
             'serious': 'Serious events',
@@ -240,17 +184,10 @@ print()
         print(f"{label:12s}: {int(count):4d} cases ({pct:5.1f}%)")
 
 # Severity consistency check
-<<<<<<< HEAD
-print()
-if 'serious' in df.columns:
-    print("Severity consistency check:")
-    
-=======
         print()
         if 'serious' in df.columns:
             print("Severity consistency check:")
 
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     # Compute whether any sub-flag is positive
     sub_serious_cols = ['seriousnessdeath', 'seriousnesshospitalization',
                         'seriousnesslifethreatening', 'seriousnessdisabling',
@@ -273,26 +210,16 @@ if 'serious' in df.columns:
             len(df) *
             100:.2f}%)")
     if inconsistent > 0:
-<<<<<<< HEAD
-        print(f"  Note: 'serious' flag does not fully match sub-flags")
-    else:
-        print(f"  Flags are consistent")
-=======
         print(f" WARNING: Note: 'serious' flag does not fully match sub-flags")
         else:
 
             print(f" Flags are consistent")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
 
 print()
 
 # Patient demographics
 print("=" * 80)
-<<<<<<< HEAD
-print("Patient demographics")
-=======
 print(" Patient demographics")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
 print("=" * 80)
 print()
 
@@ -332,20 +259,6 @@ if 'num_drugs' in df.columns:
     print()
 
 # Data sample
-<<<<<<< HEAD
-print("=" * 80)
-print("Data sample")
-print("=" * 80)
-print()
-print(df.head(5))
-print()
-
-# Epcoritamab + CRS Analysis
-print("=" * 80)
-print("Epcoritamab + CRS Analysis")
-print("=" * 80)
-print()
-=======
     print("=" * 80)
     print(" Data sample")
     print("=" * 80)
@@ -358,7 +271,6 @@ print()
     print(" Epcoritamab + CRS Analysis")
     print("=" * 80)
     print()
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
 
 # Identify Epcoritamab records
     if 'target_drug' in df.columns:
@@ -368,80 +280,12 @@ print()
     n_epcor = len(epcor_df)
 
     if n_epcor > 0:
-<<<<<<< HEAD
-        print(f"Epcoritamab Reports:")
-        print(f"   Total Epcoritamab reports: {n_epcor}")
-=======
         print(f" Epcoritamab Reports:")
         print(f" Total Epcoritamab reports: {n_epcor}")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
         print()
 
     # Death statistics
         if 'seriousnessdeath' in epcor_df.columns:
-<<<<<<< HEAD
-            death_col = pd.to_numeric(epcor_df['seriousnessdeath'], errors='coerce').fillna(0)
-            n_death = (death_col > 0).sum()
-            death_rate = (n_death / n_epcor) * 100 if n_epcor > 0 else 0
-            print(f"Death Outcomes:")
-            print(f"   Deaths in Epcoritamab reports: {n_death} ({death_rate:.1f}%)")
-            print()
-        
-        # CRS identification
-        if 'reactions' in epcor_df.columns:
-            reactions_upper = epcor_df['reactions'].fillna('').str.upper()
-            
-            # CRS keywords
-            crs_keywords = [
-                'CYTOKINE RELEASE SYNDROME',
-                'CYTOKINE RELEASE',
-                'CYTOKINE STORM'
-            ]
-            
-            crs_mask = pd.Series([False] * len(epcor_df), index=epcor_df.index)
-            for keyword in crs_keywords:
-                crs_mask |= reactions_upper.str.contains(keyword, na=False, regex=False)
-            
-            n_crs = crs_mask.sum()
-            crs_rate = (n_crs / n_epcor) * 100 if n_epcor > 0 else 0
-            
-            print(f"CRS (Cytokine Release Syndrome):")
-            print(f"   Epcoritamab reports with CRS: {n_crs} ({crs_rate:.1f}%)")
-            print()
-            
-            # CRS + Death
-            if 'seriousnessdeath' in epcor_df.columns:
-                crs_death_df = epcor_df[crs_mask]
-                if len(crs_death_df) > 0:
-                    crs_death_col = pd.to_numeric(crs_death_df['seriousnessdeath'], errors='coerce').fillna(0)
-                    n_crs_death = (crs_death_col > 0).sum()
-                    crs_death_rate = (n_crs_death / len(crs_death_df)) * 100 if len(crs_death_df) > 0 else 0
-                    
-                    print(f"CRS -> Death:")
-                    print(f"   Deaths in CRS patients: {n_crs_death} / {len(crs_death_df)} ({crs_death_rate:.1f}%)")
-                    print()
-            
-            # Summary for report/slides
-            print("=" * 80)
-            print("Summary for Report/Slides:")
-            print("=" * 80)
-            print()
-            print(f"In our dataset, we have {n_epcor} Epcoritamab reports.")
-            print(f"Among these, {n_crs} reports ({crs_rate:.1f}%) contain CRS-related adverse events.")
-            if 'seriousnessdeath' in epcor_df.columns and len(crs_death_df) > 0:
-                print(f"Of the {n_crs} CRS cases, {n_crs_death} resulted in death ({crs_death_rate:.1f}%).")
-            print()
-            print("Key Statistics:")
-            print(f"   • Total Epcoritamab reports: {n_epcor}")
-            print(f"   • Reports with CRS: {n_crs} ({crs_rate:.1f}%)")
-            if 'seriousnessdeath' in epcor_df.columns:
-                print(f"   • Total deaths in Epcoritamab reports: {n_death} ({death_rate:.1f}%)")
-                if len(crs_death_df) > 0:
-                    print(f"   • Deaths in CRS patients: {n_crs_death} / {n_crs} ({crs_death_rate:.1f}%)")
-            print()
-    else:
-        print("No Epcoritamab reports found in dataset")
-=======
             death_col = pd.to_numeric(
         epcor_df['seriousnessdeath'],
         errors='coerce').fillna(0)
@@ -500,7 +344,6 @@ print()
     if 'seriousnessdeath' in epcor_df.columns and len(crs_death_df) > 0:
         print(
             f"Of the {n_crs} CRS cases, {n_crs_death} resulted in death ( crs_death_rate:.1f}%).")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
         print()
         print(" Key Statistics:")
         print(f" • Total Epcoritamab reports: {n_epcor}")
@@ -517,33 +360,11 @@ print()
             print("WARNING: No Epcoritamab reports found in dataset")
     print()
 else:
-<<<<<<< HEAD
-    print("'target_drug' column not found - cannot analyze Epcoritamab")
-=======
     print("WARNING: 'target_drug' column not found - cannot analyze Epcoritamab")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
     print()
 
 # Summary
 print("=" * 80)
-<<<<<<< HEAD
-print("Step 2 complete - data inspection finished")
-print("=" * 80)
-print()
-
-print("Data quality assessment:")
-if len(df) >= 1000:
-    print("    Excellent: strong sample size for modelling")
-elif len(df) >= 500:
-    print("    Good: adequate sample size for modelling")
-else:
-    print("  Data volume is small but still usable for preliminary analysis")
-print()
-
-print("Next steps:")
-print("  Run: python 03_preprocess_data.py")
-print("  Purpose: data preprocessing and feature engineering")
-=======
 print(" Step 2 complete - data inspection finished")
 print("=" * 80)
 print()
@@ -560,5 +381,4 @@ print()
 print(" Next steps:")
 print(" Run: python 03_preprocess_data.py")
 print(" Purpose: data preprocessing and feature engineering")
->>>>>>> 9c36977d8a87fceb6c95c2629268ed37189c58c4
 print()
